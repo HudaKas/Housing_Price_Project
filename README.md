@@ -1,66 +1,75 @@
-# Phase 2 Project
+# Housing Price Project
 
-Another module down--you're almost half way there!
 
-![awesome](https://raw.githubusercontent.com/learn-co-curriculum/dsc-phase-2-project-campus/master/halfway-there.gif)
 
-All that remains in Phase 2 is to put our newfound data science skills to use with a large project! This project should take 20 to 30 hours to complete.
 
-## Project Overview
+![home for sale from giphy](https://media.giphy.com/media/Q5FVvyM2OuvUUysSQm/giphy.gif)
 
-For this project, you will use regression modeling to analyze house sales in a northwestern county.
+
+
+## Business Problem
+
+The king county real estate agency will use this prediction model to give their clients an estimate of the housing price when purchasing or selling houses.  The agency will estimate the price based on certain features like the location of the house, the number of bedrooms, and the size of the house.
 
 ### The Data
 
-This project uses the King County House Sales dataset, which can be found in  `kc_house_data.csv` in the data folder in this repo. The description of the column names can be found in `column_names.md` in the same folder. As with most real world data sets, the column names are not perfectly described, so you'll have to do some research or use your best judgment if you have questions about what the data means.
+The king county dataset was provided to me as part of this project by Flatiron School. The dataset consists of 21597 rows, 21 columns with different house features (continuous and categorical). These features will help to understand which factor will affect the selling price. Below is the description of each variable in the data frame:
 
-It is up to you to decide what data from this dataset to use and how to use it. If you are feeling overwhelmed or behind, we recommend you ignore some or all of the following features:
+* **price** -  Price of the house sold, prediction target
 
-* date
-* view
-* sqft_above
-* sqft_basement
-* yr_renovated
-* zipcode
-* lat
-* long
-* sqft_living15
-* sqft_lot15
+* **id** - unique identified for a house
+* **date** - the date when the house was sold
+* **bedrooms** -  number of bedrooms
+* **bathrooms** -  number of bathrooms
+* **sqft_living** -  square footage of the house’s interior living space
+* **sqft_lots** -  square footage of the land 
+* **floors** -  number of floors
+* **waterfront** - House which has a view to a waterfront
+* **view** - Has been viewed by potential buyers
+* **condition** - condition of the house coded from 1 to 5 where 1: Poor- Worn out, and 5:Very Good
+* **grade** - index from 1 to 13, where 1–3 falls short of building construction and design, 7 has an average level of construction and design, and 11–13 have a high quality level of construction and design
+* **sqft_above** - square footage of house apart from basement
+* **sqft_basement** - square footage of the basement
+* **yr_built** - the year where the house was built
+* **yr_renovated** - Year when house was renovated, and if not 0
+* **zipcode** - zip code
+* **lat** - Latitude coordinate
+* **long** - Longitude coordinate
+* **sqft_living15** - The square footage of interior housing living space for the nearest 15 neighbors
+* **sqft_lot15** - The square footage of the land lots of the nearest 15 neighbors
 
-### Business Problem
 
-It is up to you to define a stakeholder and business problem appropriate to this dataset.
+## Analysis
 
-If you are struggling to define a stakeholder, we recommend you complete a project for a real estate agency that helps homeowners buy and/or sell homes. A business problem you could focus on for this stakeholder is the need to provide advice to homeowners about how home renovations might increase the estimated value of their homes, and by what amount.
+The following questions were asked to analyze the data:
 
-## Deliverables
+1. Is there any relationship between the house’s location and its sale price?
+![location]("images/House price based on Location.png")
 
-There are three deliverables for this project:
+2. What are the top ten zip codes that have the highest selling houses in King County?
+3. What are the top ten affordable zip codes in King County?
+4. Which features are important to predict the price of the house?
 
-* A **GitHub repository**
-* A **Jupyter Notebook**
-* A **non-technical presentation**
 
-Review the "Project Submission & Review" page in the "Milestones Instructions" topic for instructions on creating and submitting your deliverables. Refer to the rubric associated with this assignment for specifications describing high-quality deliverables.
 
-### Key Points
 
-* **Your deliverables should explicitly address each step of the data science process.** Refer to [the Data Science Process lesson](https://github.com/learn-co-curriculum/dsc-data-science-processes) from Topic 19 for more information about process models you can use.
 
-* **Your Jupyter Notebook should demonstrate an iterative approach to modeling.** This means that you begin with a basic model, evaluate it, and then provide justification for and proceed to a new model. After you finish refining your models, you should provide 1-3 paragraphs discussing your final model - this should include interpreting at least 3 important parameter estimates or statistics.
 
-* **Based on the results of your models, your notebook and presentation should discuss at least two features that have strong relationships with housing prices.**
+## Conclusion
 
-## Getting Started
+- 15 features were included in the final model to get the best prediction, The following findings are from the features with the highest coefficients:
+- The price of the house is highly affected by its location.
+- Houses with larger living space, bigger basement, and more bathrooms have higher predicted price.
+- The renovated houses selling price is higher than non-renovated one
+- The houses with waterfront have higher selling prices than the ones without one.
+- Each increase of the grade will increase the price, with grade 11 in the top
 
-Start on this project by forking and cloning [this project repository](https://github.com/learn-co-curriculum/dsc-phase-2-project) to get a local copy of the dataset.
 
-We recommend structuring your project repository similar to the structure in [the Phase 1 Project Template](https://github.com/learn-co-curriculum/dsc-project-template). You can do this either by creating a new fork of that repository to work in or by building a new repository from scratch that mimics that structure.
+### Limitation:
 
-## Project Submission and Review
+The size of the dataset,  a lot of features don't have a linear relationship with the target. Maybe a different non-linear model would work better.
 
-Review the "Project Submission & Review" page in the "Milestones Instructions" topic to learn how to submit your project and how it will be reviewed. Your project must pass review for you to progress to the next Phase.
+### Future work
 
-## Summary
+Use APIs to get King county school district data and link it with the the zip codes.
 
-This project will give you a valuable opportunity to develop your data science skills using real-world data. The end-of-phase projects are a critical part of the program because they give you a chance to bring together all the skills you've learned, apply them to realistic projects for a business stakeholder, practice communication skills, and get feedback to help you improve. You've got this!
