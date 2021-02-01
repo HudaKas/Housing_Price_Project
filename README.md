@@ -47,11 +47,17 @@ The following questions were asked to analyze the data:
 ![](images/House%20price%20based%20on%20Location.png)
 
 2. What are the top ten zip codes that have the highest selling houses in King County?
+![](images/The%20highest%20price%20zipcode.png)
+
 3. What are the top ten affordable zip codes in King County?
+![](images/The%20top%20ten%20affordable%20zipcode.png)
+
 4. Which features are important to predict the price of the house?
-
-
-
+- Longitude will increase the predicated price by $233
+- Square footage of the interior housing living 15 will increase the predicated price by $171
+- Latitude will increase the predicated price by $56.
+- Square footage of the basement will increase the predicated price by $22 
+- Square footage of the interior living space will increase the predicated price by $20
 
 
 
