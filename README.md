@@ -44,7 +44,6 @@ The king county dataset was provided to me as part of this project by Flatiron S
 The following questions were asked to analyze the data:
 
 1. Is there any relationship between the house’s location and its sale price?
-
 ![](images/House price based on Location.png)
 
 2. What are the top ten zip codes that have the highest selling houses in King County?
